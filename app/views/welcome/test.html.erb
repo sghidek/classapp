@@ -1,0 +1,23 @@
+<div class = "row">
+  <div class = "col-md-6 col-md-offset-3">
+    <div class = "well">
+      <h1><%= @title %></h1>
+      <div class = "row">
+        <div class = "col-md-7">
+          <p><em><%= @title %>, <%= @year %>, starred <%= @actors %> </em></p>
+          <p>
+              Plot summary:<br /> 
+              <%= @plot %> 
+          </p>
+         
+        </div>    
+        <div class = "col-md-5">
+            <p>
+            <%=link_to "Full Description", @forecast_link, target: "_blank" %>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>    
+</div>
+

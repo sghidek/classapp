@@ -1,0 +1,19 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: rgb(197, 221, 224);
+}
+
+h2 {
+  color: lightslategrey;
+  font-weight:bold;
+  text-transform: uppercase;
+}
+
+#task-form {
+  margin:10px 0;
+  background: lightslategrey;
+  padding: 10px 10px 5px;
+}

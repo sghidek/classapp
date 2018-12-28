@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-1">
+        <div class="well">
+	    <h1><br />Filmed in and around Wilmington</h1>
+	    <p>Learn more about TV series produced in the Wilmington area in the 2000s.</p>
+		    <div>
+	            <%= form_tag index_path do %>
+					<%= select_tag :shows, options_for_select(@shows), prompt: "Please select", class: "btn btn-dark" %><br /><br />
+			    	<%= submit_tag "Learn more", class: "btn btn-info" %>
+			<% end %>
+		    </div>
+		</div>
+    </div>
+</div>
+
+<!-- Our response from API -->
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="well">
+
+<!-- Bring in the instance variable from our controller to display on our index page. -->
+<!-- Check to make sure @title is not empty or nil and  that the API did not return an error -->
+<% if @title != nil && @title != "" && (@error == "" || @error == nil) %>
+      <h1><br />Details about <%= @title %></h1>
+
+      <div class="row">
+        <div class="col-md-7">
+	  <h2><%= @year %></h2> 
+	  <p><em><%= @title %></em> starred <%= @actors %> </p>
+	  <h3>Plot summary</h3>
+          <p>
+              <%= @plot %> 
+          </p>
+        </div>
+       
+      </div>
+
+     
+<% end %>
+    </div>
+  </div>
+</div>
